@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☕ Java Code Academy - Learn Java Programming</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-code"></i>
+                <span>☕ Java Code Academy</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">🏠 Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#courses" class="nav-link">📚 Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">ℹ️ About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">📞 Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    🚀 Master Java Programming <br>
+                    <span class="highlight">From Zero to Hero!</span>
+                </h1>
+                <p class="hero-description">
+                    🎯 Learn Java fundamentals, OOP concepts, data structures, and build real-world projects. 
+                    Join thousands of developers who started their journey here! 💻✨
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('courses')">
+                        🎓 Start Learning
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('about')">
+                        📖 Learn More
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Students</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Lessons</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Free</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-animation">
+                    <div class="code-line">public class HelloWorld {</div>
+                    <div class="code-line">    public static void main(String[] args) {</div>
+                    <div class="code-line">        System.out.println("Hello, World! 🌍");</div>
+                    <div class="code-line">    }</div>
+                    <div class="code-line">}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>📚 Our Java Courses</h2>
+                <p>🎯 Choose your learning path and master Java programming step by step</p>
+            </div>
+            <div class="courses-grid">
+                <div class="course-card" data-course="basics">
+                    <div class="course-icon">🔰</div>
+                    <h3>Java Basics</h3>
+                    <p>Learn fundamental concepts: variables, data types, operators, and control structures</p>
+                    <div class="course-features">
+                        <span>📝 15 Lessons</span>
+                        <span>⏱️ 2 Hours</span>
+                        <span>🎯 Beginner</span>
+                    </div>
+                    <button class="btn btn-course" onclick="openCourse('basics')">
+                        🚀 Start Course
+                    </button>
+                </div>
+
+                <div class="course-card" data-course="oop">
+                    <div class="course-icon">🏗️</div>
+                    <h3>Object-Oriented Programming</h3>
+                    <p>Master classes, objects, inheritance, polymorphism, and encapsulation</p>
+                    <div class="course-features">
+                        <span>📝 20 Lessons</span>
+                        <span>⏱️ 3 Hours</span>
+                        <span>🎯 Intermediate</span>
+                    </div>
+                    <button class="btn btn-course" onclick="openCourse('oop')">
+                        🚀 Start Course
+                    </button>
+                </div>
+
+                <div class="course-card" data-course="collections">
+                    <div class="course-icon">📦</div>
+                    <h3>Java Collections</h3>
+                    <p>Explore ArrayList, LinkedList, HashMap, HashSet, and more data structures</p>
+                    <div class="course-features">
+                        <span>📝 18 Lessons</span>
+                        <span>⏱️ 2.5 Hours</span>
+                        <span>🎯 Intermediate</span>
+                    </div>
+                    <button class="btn btn-course" onclick="openCourse('collections')">
+                        🚀 Start Course
+                    </button>
+                </div>
+
+                <div class="course-card" data-course="exceptions">
+                    <div class="course-icon">⚠️</div>
+                    <h3>Exception Handling</h3>
+                    <p>Learn try-catch blocks, custom exceptions, and error handling best practices</p>
+                    <div class="course-features">
+                        <span>📝 12 Lessons</span>
+                        <span>⏱️ 1.5 Hours</span>
+                        <span>🎯 Intermediate</span>
+                    </div>
+                    <button class="btn btn-course" onclick="openCourse('exceptions')">
+                        🚀 Start Course
+                    </button>
+                </div>
+
+                <div class="course-card" data-course="multithreading">
+                    <div class="course-icon">⚡</div>
+                    <h3>Multithreading</h3>
+                    <p>Understand threads, synchronization, and concurrent programming in Java</p>
+                    <div class="course-features">
+                        <span>📝 16 Lessons</span>
+                        <span>⏱️ 2 Hours</span>
+                        <span>🎯 Advanced</span>
+                    </div>
+                    <button class="btn btn-course" onclick="openCourse('multithreading')">
+                        🚀 Start Course
+                    </button>
+                </div>
+
+                <div class="course-card" data-course="projects">
+                    <div class="course-icon">🎯</div>
+                    <h3>Real-World Projects</h3>
+                    <p>Build practical applications: calculator, bank system, and more</p>
+                    <div class="course-features">
+                        <span>📝 25 Lessons</span>
+                        <span>⏱️ 4 Hours</span>
+                        <span>🎯 All Levels</span>
+                    </div>
+                    <button class="btn btn-course" onclick="openCourse('projects')">
+                        🚀 Start Course
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Learning Section -->
+    <section class="interactive-learning">
+        <div class="container">
+            <div class="section-header">
+                <h2>💻 Interactive Java Playground</h2>
+                <p>🎮 Practice Java code in real-time with our interactive code editor</p>
+            </div>
+            <div class="code-playground">
+                <div class="code-editor">
+                    <div class="editor-header">
+                        <span>📝 Java Code Editor</span>
+                        <button class="btn btn-run" onclick="runCode()">
+                            ▶️ Run Code
+                        </button>
+                    </div>
+                    <textarea id="codeInput" placeholder="// Write your Java code here...&#10;public class Main {&#10;    public static void main(String[] args) {&#10;        System.out.println(&quot;Hello from Java! 🚀&quot;);&#10;    }&#10;}">// Write your Java code here...
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello from Java! 🚀");
+    }
+}</textarea>
+                </div>
+                <div class="code-output">
+                    <div class="output-header">
+                        <span>📤 Output</span>
+                        <button class="btn btn-clear" onclick="clearOutput()">
+                            🗑️ Clear
+                        </button>
+                    </div>
+                    <div id="outputDisplay" class="output-content">
+                        <p class="output-placeholder">✨ Your code output will appear here!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>🤔 Why Learn Java?</h2>
+                    <p>Java is one of the most popular programming languages in the world, used by millions of developers and companies worldwide. 🌍</p>
+                    
+                    <div class="features-list">
+                        <div class="feature">
+                            <span class="feature-icon">🔒</span>
+                            <div>
+                                <h4>Platform Independent</h4>
+                                <p>Write once, run anywhere! Java programs work on any device with a JVM.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🏗️</span>
+                            <div>
+                                <h4>Object-Oriented</h4>
+                                <p>Learn modern programming concepts that are essential in today's software development.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">💼</span>
+                            <div>
+                                <h4>High Demand</h4>
+                                <p>Java developers are in high demand with excellent salary prospects.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🌐</span>
+                            <div>
+                                <h4>Versatile</h4>
+                                <p>Build web apps, mobile apps, desktop software, and enterprise solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="java-logo">
+                        <span>☕</span>
+                        <h3>Java</h3>
+                        <p>Since 1995</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>📞 Get In Touch</h2>
+                <p>💬 Have questions? We'd love to hear from you!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hello@javacodeacademy.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🌐</span>
+                        <div>
+                            <h4>Website</h4>
+                            <p>www.javacodeacademy.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="👤 Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="📧 Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="💬 Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        📤 Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>☕ Java Code Academy</h3>
+                    <p>Empowering developers to master Java programming through interactive learning and real-world projects.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘 Facebook</a>
+                        <a href="#" class="social-link">🐦 Twitter</a>
+                        <a href="#" class="social-link">💼 LinkedIn</a>
+                        <a href="#" class="social-link">📷 Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>📚 Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">🏠 Home</a></li>
+                        <li><a href="#courses">📚 Courses</a></li>
+                        <li><a href="#about">ℹ️ About</a></li>
+                        <li><a href="#contact">📞 Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>🎓 Learning Paths</h4>
+                    <ul>
+                        <li><a href="#">🔰 Beginner</a></li>
+                        <li><a href="#">🏗️ Intermediate</a></li>
+                        <li><a href="#">⚡ Advanced</a></li>
+                        <li><a href="#">🎯 Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Java Code Academy. All rights reserved. 🚀</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Course Modal -->
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalContent">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
